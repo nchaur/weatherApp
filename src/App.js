@@ -20,6 +20,7 @@ function App() {
 
   return (
     <div className={typeof data.main !== "undefined" ? (data.main.temp > 70 ? "app warm" : "app cold") : "app"}>
+      <h1 className="weatherTitle">The weather app</h1>
       <div className="search">
         <input
           type="text"
@@ -40,7 +41,7 @@ function App() {
         {data.name !== undefined && (
           <div className="bottom">
             <div className="feels">
-              {data.main ? <p>{data.main.feels_like.toFixed()}</p> : null}
+              {data.main ? <p>{data.main.feels_like.toFixed()} ºF</p> : null}
               <p className="bold">Feels like</p>
             </div>
             <div className="humidity">
